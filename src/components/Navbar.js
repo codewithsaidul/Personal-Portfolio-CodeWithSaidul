@@ -78,13 +78,13 @@ const Navbar = () => {
 
       {/* Humburger Menu */}
       <button onClick={handleClick} className="flex-col items-center justify-center hidden lg:flex">
-        <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm -translate-y-0.5 rotate-0 ${isOpen && 'rotate-45 translate-y-1.2 duration-300'}`}></span>
+        <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm -translate-y-0.5 rotate-0 ${isOpen && 'rotate-45 translate-y-1 duration-300'}`}></span>
 
 
         <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm my-0.5  ${isOpen && 'opacity-0'}`}></span>
 
 
-        <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm translate-y-0.5 ${isOpen ? '-rotate-45 -translate-y-2 duration-300' : ''}`}></span>
+        <span className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm translate-y-0.5 ${isOpen ? '-rotate-45 -translate-y-1 duration-300' : ''}`}></span>
       </button>
 
 
