@@ -19,6 +19,7 @@
 .DS_Store
 *.pem
 *.pdf
+SEO/SEO.js
 
 # debug
 npm-debug.log*
