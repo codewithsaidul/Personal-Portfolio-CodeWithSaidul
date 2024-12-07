@@ -2,7 +2,7 @@ import Layout from "@/Layout/Layout";
 import AnimatedText from "@/components/AnimatedText";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import AboutImage from "../../public/images/profile/aboutProfile.jpg";
+import AboutImage from "../../public/images/profile/aboutProfile.png";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Exprience from "@/components/Exprience";
@@ -15,7 +15,7 @@ const AnimatedNumber = ({ value }) => {
 
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView(ref, {once: true});
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (isInView) {
@@ -25,8 +25,8 @@ const AnimatedNumber = ({ value }) => {
 
   useEffect(() => {
     springValue.on("change", (latest) => {
-      if(ref.current && latest.toFixed(0) <= value) {
-        ref.current.textContent = latest.toFixed(0)
+      if (ref.current && latest.toFixed(0) <= value) {
+        ref.current.textContent = latest.toFixed(0);
       }
     });
   }, [springValue, value]);
@@ -37,21 +37,13 @@ const AnimatedNumber = ({ value }) => {
 const about = () => {
   return (
     <>
-
-
-
       {/* Meta Tag & Web Site Title */}
       <SEO pagename="About" />
       {/* Meta Tag & Web Site Title */}
 
-
-
-
-
       {/* For The Transition Effect */}
       <TransitionEffect />
       {/* For The Transition Effect */}
-
 
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
@@ -60,37 +52,39 @@ const about = () => {
             className="!text-7xl mb-16 lg:!text-6xl md:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8"
           />
 
-          <div className="w-full grid grid-cols-8 gap-16 sm:gap-8">
+          <div className="w-full flex md:flex-col flex-row gap-16 sm:gap-8">
             {/* About Me */}
-            <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
+            <div className="md:w-full w-[65%] flex-1 flex flex-col items-start justify-start md:order-2">
               <h2 className="mt-5 text-lg font-bolt uppercase text-dark/75 dark:text-light/75">
                 About Me
               </h2>
 
               <p className="font-medium">
-                Hi, I&apos;m Saidul Islam Rana, a web developer and UI/UX
-                designer with a passion for creating beautiful, functional, and
-                user-centered digital experiences. With 4 years of experience in
-                the field. I am always looking for new and innovative ways to
-                bring my clients&apos; visions to life.
+                HI, I&apos;m Saidul Islam Rana, a front-end developer skilled in
+                Next.js, Material UI, Tailwind CSS, React.js, and Framer Motion.
+                I combine creativity and functionality to create visually
+                appealing, interactive digital experiences. Delivering smooth,
+                full-stack solutions is made possible by my backend expertise in
+                Node.js, Express.js, and MongoDB.
               </p>
               <p className="my-4 font-medium">
-                bring my clients&apos; visions to life. -I believe that design
-                is about more than just making things look pretty – it&apos;s
-                about solving problems and creating intuitive, enjoyable
-                experiences for users. bring my clients&apos; visions to life.
+                My areas of expertise are creating dynamic portfolios,
+                responsive web apps, and cutting-edge e-commerce platforms. I
+                implement authentication and secure backend functionalities
+                using JWT and Firebase.
               </p>
               <p className="font-medium">
-                Whether I&apos;m working on a website, mobile app, or other
-                digital product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                In order to provide significant, user-focused digital solutions,
+                I founded Saku Artisans, Saku Real Estates, and Tronix
+                Electronics Commerce in addition to developing the healthcare
+                management platform CarePulse. My objective is to make the web
+                more aesthetically pleasing, user-friendly, and accessible to
+                everyone.
               </p>
             </div>
 
             {/* About Image */}
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark dark:border-light p-3 xl:col-span-4 md:order-1 md:col-span-8">
+            <div className="md:w-full w-[35%] relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark dark:border-light p-3  md:order-1 ">
               <div className="absolute top-1 -right-3 -z-10 w-[102%] h-[105%] rounded-[2rem] bg-dark dark:bg-light" />
               <Image
                 src={AboutImage}
@@ -102,7 +96,7 @@ const about = () => {
             </div>
 
             {/* Exprience Satisfied Client */}
-            <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
+            {/* <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-5xl sm:text-4xl xs:text-3xl">
                   <AnimatedNumber value={50} />+
@@ -129,15 +123,14 @@ const about = () => {
                   years of exprience
                 </h2>
               </div>
-            </div>
+            </div> */}
           </div>
-
 
           {/* Skill */}
           <Skills />
 
           {/* Exprience */}
-          <Exprience />
+          {/* <Exprience /> */}
 
           {/* Education */}
           <Education />

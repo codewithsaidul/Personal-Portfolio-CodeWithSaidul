@@ -22,7 +22,7 @@ const Details = ({ type, time, place, info }) => {
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
           {type}
         </h3>
-        <span className="capitalize font-medium text-dark/75 text-base xs-text-sm">
+        <span className="capitalize font-medium dark:text-white/75 text-dark/75  text-base xs-text-sm">
           {time} | {place}
         </span>
         <p className="font-medium w-full text-base xs-text-sm">{info}</p>
@@ -58,27 +58,12 @@ const Education = () => {
 
         {/* Education BSC*/}
           <Details
-            type="Bachelor Of Science In Computer Science"
-            time="2016-2020"
-            place="Massachusetts Institute Of Technology (MIT)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."
+            type="Diploma Engineering In Computer Technology"
+            time="2019-2023"
+            place="Sylhet Polytechnic Institute (SPI)"
+            info="Along with other fundamental computer science courses, my diploma in Computer Science & Technology comprised classes like Data Structures and Algorithms."
           />
 
-        {/* Education Master*/}
-          <Details
-            type="Master Of Computer Science"
-            time="2020-2022"
-            place="Stanford University"
-            info="Completed a master's project on deep learning, developing a new neural network architecture for natural language understanding."
-          />
-
-        {/* Education BSC*/}
-          <Details
-            type="Online Coursework"
-            time="2016-2020"
-            place="Coursera And EdX"
-            info="Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine Learning Engineering."
-          />
 
 
         </ul>
