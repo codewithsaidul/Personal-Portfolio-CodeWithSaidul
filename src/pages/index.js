@@ -1,4 +1,3 @@
-
 import Layout from "@/Layout/Layout";
 import Image from "next/image";
 import ProfilePic from "../../public/images/profile/profile.png";
@@ -13,18 +12,13 @@ import SEO from "@/SEO/SEO";
 export default function Home() {
   return (
     <>
-
       {/* Meta Tag & Web Site Title */}
       <SEO pagename="Home" />
       {/* Meta Tag & Web Site Title */}
 
-
-
       {/* For The Transition Effect */}
       <TransitionEffect />
       {/* For The Transition Effect */}
-
-
 
       <main className="flex items-center text-dark w-full min-h-[calc(100vh-195px)] dark:text-light">
         {/* Home Page */}
@@ -34,23 +28,25 @@ export default function Home() {
               <Image
                 src={ProfilePic}
                 alt="profile image"
-                className="w-full h-auto lg:hidden md:inline-block md:w-full"
+                className="w-full h-auto  md:inline-block md:w-full"
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
               />
             </div>
 
-            <div className="w-1/2 lg:w-full flex flex-col items-center self-center lg:text-center">
+            <div className="w-1/2 lg:w-full flex flex-col">
+              <span className="text-lg font-semibold">Front-End Developer</span>
               <AnimatedText
-                text="Turning Vision Into Reality With Code And Design"
-                className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
+                text="Saidul Islam Rana"
+                className="!text-6xl !text-left xl:!text-5xl  lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
 
               <p className="my-5 text-base font-medium md:text-sm sm:text-xs">
-                As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects and articles, showcasing my expertise in React.js and
-                web development
+                Modern design meets front-end whiz! I turn concepts into
+                beautiful, engaging online experiences. Discover projects and
+                insights created with proficiency in React.js and
+                state-of-the-art web technologies in my portfolio, where
+                functionality and creativity coexist.
               </p>
 
               <div className="flex items-center self-start mt-2 gap-3 lg:self-center">
@@ -78,7 +74,7 @@ export default function Home() {
 
         <HireMe />
 
-        <div className="absolute right-32 bottom-60 w-24 h-24 inline-block md:hidden">
+        <div className="absolute right-20 bottom-52 w-24 h-24 inline-block md:hidden">
           <Image src={LightBulb} alt="codewithsaidul" />
         </div>
       </main>
